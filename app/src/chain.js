@@ -28,8 +28,13 @@ export async function connectLocal(index) {
 /** Connect through an injected wallet such as MetaMask. */
 export async function connectInjected() {
   if (!window.ethereum) throw new Error("No browser wallet found. Use local demo mode instead.");
+  await window.ethereum.request({ method: "eth_requestAccounts" });
+  const current = Number(await window.ethereum.request({ method: "eth_chainId" }));
+  if (!deployments[current]) {
+    // put the wallet on Sepolia, where the public deployment lives
+    await window.ethereum.request({ method: "wallet_switchEthereumChain", params: [{ chainId: "0xaa36a7" }] });
+  }
   const provider = new BrowserProvider(window.ethereum);
-  await provider.send("eth_requestAccounts", []);
   const signer = await provider.getSigner();
   return build(provider, signer, []);
 }
