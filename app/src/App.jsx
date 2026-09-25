@@ -207,6 +207,7 @@ function Logo() {
 }
 
 function Landing({ onConnect, error }) {
+  const hosted = !["localhost", "127.0.0.1"].includes(window.location.hostname);
   return (
     <div className="landing">
       <Logo />
@@ -220,13 +221,27 @@ function Landing({ onConnect, error }) {
         Addresses that other senders have rewound are held longer, and lookalike addresses are flagged before you hit send.
       </p>
       <div className="cta">
-        <button className="primary" onClick={() => onConnect("local", 0)}>
-          Open local demo
-        </button>
-        <button className="ghost" onClick={() => onConnect("injected")}>
-          Connect wallet
-        </button>
+        {hosted ? (
+          <button className="primary" onClick={() => onConnect("injected")}>
+            Connect wallet · Sepolia
+          </button>
+        ) : (
+          <>
+            <button className="primary" onClick={() => onConnect("local", 0)}>
+              Open local demo
+            </button>
+            <button className="ghost" onClick={() => onConnect("injected")}>
+              Connect wallet
+            </button>
+          </>
+        )}
       </div>
+      {hosted && (
+        <p className="dim">
+          Needs MetaMask and a little Sepolia ETH. The full scripted demo with test accounts runs locally; see the{" "}
+          <a href="https://github.com/dhruhisheth/rewind#run-it-locally">README</a>.
+        </p>
+      )}
       {error && <p className="error">{error}</p>}
       <ol className="how">
         <li>

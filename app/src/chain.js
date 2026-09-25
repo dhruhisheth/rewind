@@ -27,7 +27,7 @@ export async function connectLocal(index) {
 
 /** Connect through an injected wallet such as MetaMask. */
 export async function connectInjected() {
-  if (!window.ethereum) throw new Error("No browser wallet found. Use local demo mode instead.");
+  if (!window.ethereum) throw new Error("No wallet found. Install MetaMask in Chrome, Brave or Firefox to try Rewind on Sepolia.");
   await window.ethereum.request({ method: "eth_requestAccounts" });
   const current = Number(await window.ethereum.request({ method: "eth_chainId" }));
   if (!deployments[current]) {
