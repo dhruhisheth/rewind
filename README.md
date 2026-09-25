@@ -13,6 +13,7 @@ Rewind is a smart-contract payment layer where every transfer first sits in a sh
 
 ## Live on Sepolia
 
+- **Demo video:** https://youtu.be/QyWzOnt0S5g
 - **App:** https://dhruhisheth.github.io/rewind/ (connect MetaMask on the Sepolia network)
 - **Rewind:** [`0x95Ad0FC04f5a0Eb1BB354dFA5Ba129153F433Ceb`](https://sepolia.etherscan.io/address/0x95Ad0FC04f5a0Eb1BB354dFA5Ba129153F433Ceb) (5-minute base window)
 - **MockUSDC:** [`0xd17C9e6Bb00655E7c7540740Cd08F5Aa14Caa763`](https://sepolia.etherscan.io/address/0xd17C9e6Bb00655E7c7540740Cd08F5Aa14Caa763) (anyone can mint test dollars from the app)
