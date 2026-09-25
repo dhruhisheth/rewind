@@ -111,7 +111,7 @@ export default function App() {
       <header className="top">
         <Logo />
         <div className="top-right">
-          <span className="pill">{isLocal ? "Local Hardhat" : `Chain ${ctx.chainId}`}</span>
+          <span className="pill">{isLocal ? "Local Hardhat" : ctx.chainId === 11155111 ? "Sepolia testnet" : `Chain ${ctx.chainId}`}</span>
           {ctx.knownAccounts.length ? (
             <div className="personas" role="tablist" aria-label="Act as">
               {PERSONAS.map((p, i) => (
@@ -135,7 +135,7 @@ export default function App() {
         <div>
           <span className="label">Signed in as</span>
           <strong>{ctx.knownAccounts.length ? PERSONAS[persona].name : short(ctx.address)}</strong>
-          <span className="mono dim">{short(ctx.address)}</span>
+          {ctx.knownAccounts.length > 0 && <span className="mono dim">{short(ctx.address)}</span>}
         </div>
         <div>
           <span className="label">ETH</span>
