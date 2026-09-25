@@ -4,5 +4,11 @@
     "rewind": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
     "usdc": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
     "baseWindow": 120
+  },
+  "11155111": {
+    "network": "sepolia",
+    "rewind": "0x95Ad0FC04f5a0Eb1BB354dFA5Ba129153F433Ceb",
+    "usdc": "0xd17C9e6Bb00655E7c7540740Cd08F5Aa14Caa763",
+    "baseWindow": 300
   }
 }

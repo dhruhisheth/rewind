@@ -11,6 +11,12 @@ Rewind is a smart-contract payment layer where every transfer first sits in a sh
 | *N* different senders have rewound payments to this address | Held **(N + 1)×** longer, capped at 7 days |
 | The address imitates one you've paid (address poisoning) | **Blocked** until you confirm, with a character-level diff |
 
+## Live on Sepolia
+
+- **App:** https://dhruhisheth.github.io/rewind/ (connect MetaMask on the Sepolia network)
+- **Rewind:** [`0x95Ad0FC04f5a0Eb1BB354dFA5Ba129153F433Ceb`](https://sepolia.etherscan.io/address/0x95Ad0FC04f5a0Eb1BB354dFA5Ba129153F433Ceb) (5-minute base window)
+- **MockUSDC:** [`0xd17C9e6Bb00655E7c7540740Cd08F5Aa14Caa763`](https://sepolia.etherscan.io/address/0xd17C9e6Bb00655E7c7540740Cd08F5Aa14Caa763) (anyone can mint test dollars from the app)
+
 ## The problem
 
 Irreversibility protects users from chargeback fraud, but it hands the advantage to scammers:

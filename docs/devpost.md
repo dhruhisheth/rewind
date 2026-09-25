@@ -72,6 +72,7 @@ solidity · hardhat · openzeppelin · ethereum · ethers.js · react · vite ·
 
 ## Links
 
-- GitHub: [repo URL]
+- GitHub: https://github.com/dhruhisheth/rewind
+- Live app (Sepolia, MetaMask): https://dhruhisheth.github.io/rewind/
 - Demo video: [video URL]
 - Pitch deck: [deck URL or PDF]
